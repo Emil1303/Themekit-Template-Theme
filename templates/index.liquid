@@ -4,8 +4,8 @@
 
 <ul>
 {% for product in collection.products %}
-
-  {{ product.title }} - {{product.price | money}}
-
+  <li>
+  	{{ product.title }} - {{product.price | money}}
+  </li>
 {% endfor %}
 </ul>
