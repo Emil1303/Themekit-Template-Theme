@@ -2,3 +2,10 @@
 {{ collection.title }}
 
 
+<ul>
+{% for product in collection.products %}
+
+  {{ product.title }} - {{product.price | money}}
+
+{% endfor %}
+</ul>
