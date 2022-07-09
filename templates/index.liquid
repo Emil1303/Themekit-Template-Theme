@@ -1,3 +1,13 @@
-{% for product in collection.products %} 
-	{{ product.title }} 
+{% assign collection = collections['all'] %}
+{{ collection.title }}
+
+
+<ul>
+{% for product in collection.products %}
+  <li>
+    <a href="{{ product.url }}">
+  	  {{ product.title }} - {{product.price | money}}
+    </a>
+  </li>
 {% endfor %}
+</ul>
